@@ -1,0 +1,778 @@
+/*
+Theme Name: Bootstrap Basic4
+Theme URI: http://rundiz.com
+Author: Vee Winch, christianoliff
+Author URI:
+Description: Bootstrap v.4 basic theme for developers to build their new theme very fast and easy. (WordPress 5 or Gutenberg ready.) The concept is to keep it basic, no rich features, no additional functions; all of these for theme developers will be easier to start develop their theme. To follow what was changed, please look for <a href="https://github.com/Rundiz-WP/bootstrap-basic4" target="commits">commits</a> of this theme at Github or changelog.md file that come with the theme. Please read notice on Bootstrap Basic 4 Help page in Dashboard &gt; Appearance &gt; Bootstrap Basic4 Help or in readme.txt file in this theme package.
+Version: 1.3.2
+Requires PHP: 5.5
+Requires at least: 5.0
+Tested up to: 5.9
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Text Domain: bootstrap-basic4
+Domain Path: /languages/
+Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, post-formats, threaded-comments, translation-ready, editor-style, blog
+
+This theme built with Twitter Bootstrap v.4. It is basic theme with basic style for build new theme with Bootstrap.
+
+*/
+
+
+/*
+Required WordPress CSS
+*/
+
+
+.comment-form-comment {
+    display: none;
+}
+
+.sb_youtube_header {
+    display: none;
+}
+
+@font-face {
+    font-family: 'Korolev';
+    font-style: normal;
+    font-weight: 200;
+    src: local("Korolev Thin"), url("assets/fonts/Korolev\ Thin.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Korolev';
+    font-style: normal;
+    font-weight: 300;
+    src: local("Korolev Light"), url("assets/fonts/Korolev\ Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Korolev';
+    font-style: italic;
+    font-weight: 300;
+    src: local("Korolev Light Italic"), url("assets/fonts/Korolev\ Light\ Italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Korolev';
+    font-weight: 400;
+    font-style: normal;
+    src: local("Korolev Medium"), url("assets/fonts/Korolev\ Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Korolev';
+    font-style: italic;
+    font-weight: 500;
+    src: local("Korolev Medium Italic"), url("assets/fonts/Korolev\ Medium\ Italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Korolev';
+    font-style: normal;
+    font-weight: 600;
+    src: local("Korolev Bold"), url("assets/fonts/Korolev\ Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Korolev';
+    font-style: italic;
+    font-weight: 600;
+    src: local("Korolev Bold Italic"), url("assets/fonts/Korolev\ Bold\ Italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Korolev';
+    font-style: normal;
+    font-weight: 700;
+    src: local("Korolev Heavy"), url("assets/fonts/Korolev\ Heavy.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Korolev';
+    font-style: italic;
+    font-weight: 700;
+    src: local("Korolev Heavy Italic"), url("assets/fonts/Korolev\ Heavy\ Italic.woff") format("woff");
+}
+
+@import url("https://fonts.googleapis.com/css?family=Mada:200,300,400,500,600,700,900");
+
+a {
+    text-decoration: none !important;
+}
+
+.btn-orange {
+    background-color: #d95826 !important;
+    color: #FFF !important;
+    font-family: 'Mada', Arial, sans-serif;
+
+}
+
+.btn-orange:hover {
+    background-color: #d95826 !important;
+    color: #FFF !important;
+    font-family: 'Mada', Arial, sans-serif;
+
+}
+
+/*  INICIO PERSONALIZAÇÃO PARA O BLOG DO SESI */
+
+/* INICIO SOCIAL ICON */
+.i-facebook a {
+    color: #0B5ED7;
+}
+
+.i-facebook a:hover {
+    color: #0c3d88;
+}
+
+.i-instagram a {
+    color: #a72d72;
+}
+
+.i-instagram a:hover {
+    color: #992A69;
+}
+
+.i-linkedin a {
+    color: #0c3d88;
+}
+
+.i-linkedin a:hover {
+    color: #072b61;
+}
+
+.i-youtube a {
+    color: #FF0000;
+}
+
+.i-youtube a:hover {
+    color: #bd0303;
+}
+
+/* FIM SOCIAL ICON */
+
+.menu-institucional-container-blog {
+    background-color: #4e5056;
+}
+
+.blog-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.blog-menu li {
+    display: inline-block;
+}
+
+.blog-menu li+.ativo-casa a {
+    border-bottom: 4.5px solid #FFF;
+
+}
+
+.blog-menu li a {
+    position: relative;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 15px;
+    display: block;
+    text-transform: uppercase;
+    font-family: "Korolev";
+    transition: all 0.4s ease;
+
+}
+
+.blog-menu li a:hover {
+    background-color: #c97c19;
+    transition: all 0.4s ease;
+}
+
+.title-header {
+    font-size: 22px;
+    padding-top: 5px;
+    font-family: "Korolev";
+}
+
+/* INICIO SUBMENU BLOG */
+.menu-blog-category {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-blog-category li {
+    display: inline-block;
+
+}
+
+.menu-blog-category li a {
+    position: relative;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0px 22px;
+    display: block;
+    font-family: "Korolev";
+    transition: all 0.4s ease;
+
+}
+
+.menu-blog-category li a:hover {
+    color: #ff6a2f;
+    transition: all 0.4s ease;
+}
+
+.search-input {
+    background-color: transparent;
+    color: #FFF;
+    border: 1px solid #FFF;
+    padding: .4rem 0;
+}
+
+.icon-rtl-search {
+    padding-right: 25px;
+    background: url("assets/img/icon/lupa.webp") no-repeat center right 15px;
+    background-size: 20px;
+}
+
+/* FIM DO SUBMENU BLOG*/
+
+/* INICIO CAROUSEL */
+.owl-dots {
+    text-align: left !important;
+    left: 2%;
+}
+
+.owl-dots {
+    position: absolute;
+    top: 47%;
+    left: 45%;
+    right: 25%;
+
+}
+
+
+.owl-theme .owl-dots .owl-dot span {
+    background-color: #626262 !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+    background-color: #ff6a2f !important;
+    width: 22px;
+}
+
+.img-carousel {
+    width: 100%;
+    height: 420px;
+}
+
+.tag-title {
+    font-family: 'Korolev';
+    color: #ff6a2f;
+    font-size: 2.063rem !important;
+    font-weight: 600;
+}
+
+.tag-description {
+    color: #4e5056 !important;
+    font-family: 'Mada', Arial, sans-serif !important;
+    text-align: justify;
+}
+
+.tag-description a {
+    color: #626262 !important;
+}
+
+.tag-description a:hover {
+    color: #353535 !important;
+}
+
+.tag-category {
+    font-family: 'Korolev';
+    color: #000000;
+    font-size: 1.125rem !important;
+    font-weight: 600;
+}
+
+.tag-category a {
+    color: #000000;
+    transition: all 0.4s ease !important;
+
+}
+
+.tag-category a:hover {
+    color: #000000;
+    transition: all 0.4s ease !important;
+}
+
+.tag-category-alt {
+    font-family: 'Korolev';
+    color: #F39720;
+    font-size: 1.125rem !important;
+    font-weight: 600;
+    border-bottom: 2px solid #4c4c4c;
+}
+
+.tag-category-alt a {
+    color: #F39720;
+    transition: all 0.4s ease !important;
+
+}
+
+.tag-category-alt a:hover {
+    color: #53286C;
+    transition: all 0.4s ease !important;
+}
+
+.tag-post-date {
+    font-family: 'Korolev';
+    color: #626262;
+    font-size: 1.125rem !important;
+    font-weight: 300;
+    text-align: right;
+}
+
+.tag-post-date-alt {
+    font-family: 'Korolev';
+    color: #626262;
+    font-size: 1.125rem !important;
+    font-weight: 300;
+}
+
+/* BACKGROUND CARROSSEL */
+
+/* FIM CAROUSEL */
+.img-carousel {
+    object-fit: cover;
+}
+
+/* INICIO DE MAIS POSTS */
+.more-cover {
+    position: relative;
+    max-width: 100%;
+}
+
+.more-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-flex;
+}
+
+.more-comment,
+.more-liked {
+    font-family: 'Mada', Arial, sans-serif !important;
+    background-color: #ff6a2f;
+    padding: .4rem .9rem;
+    color: #FFF;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.more-liked a {
+    color: #FFF;
+    transition: all 0.4s ease !important;
+}
+
+.more-liked a:hover {
+    color: #F39720;
+    transition: all 0.4s ease !important;
+}
+
+.more-img-thumbnail {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.more-notice-category {
+    font-family: 'Korolev';
+    background-color: #595b61;
+    color: #FFF;
+    font-size: 16px !important;
+    font-weight: 600;
+    padding: .5rem 1.8rem;
+}
+
+.more-notice-category a {
+    color: #FFF;
+    transition: all 0.4s ease !important;
+}
+
+.more-notice-category a:hover {
+    color: #FFF;
+    transition: all 0.4s ease !important;
+}
+
+.more-post-date-alt {
+    font-family: 'Korolev';
+    color: #595b61;
+    font-size: 18px !important;
+    font-weight: 300;
+}
+
+.more-title-alt {
+    font-family: 'Korolev';
+    color: #3c3e44;
+    font-size: 22px !important;
+    font-weight: 600;
+    line-height: 1.6rem;
+    padding-right: 1rem;
+}
+
+.more-title-alt a {
+    color: #4e5056;
+    transition: all 0.4s ease !important;
+}
+
+.more-title-alt a:hover {
+    color: #4d4d4d;
+    transition: all 0.4s ease !important;
+}
+
+.more-description-alt {
+    color: #626262 !important;
+    font-size: 15px;
+    font-family: 'Mada', Arial, sans-serif !important;
+    text-align: justify;
+}
+
+/* FIM DE MAIS POSTS */
+
+/* INICIO MAIS POPULAR */
+.popular-description a {
+    font-family: 'Mada', Arial, sans-serif !important;
+    font-size: 15px;
+    font-weight: bold;
+    color: #595b61 !important;
+
+}
+
+.popular-description a:hover {
+    color: #595b61 !important;
+
+}
+
+/* FIM MAIS POPULAR */
+
+/* INICIO INSTA*/
+
+.insta-social a {
+    color: #4c4c4c;
+}
+
+.insta-social a:hover {
+    color: #6e6c6c;
+}
+
+/* FIM INSTA*/
+
+/* INICIO VIDEO */
+
+.video {
+    background-color: #595b61;
+    color: #FFFFFF;
+}
+
+.video,
+.video-title {
+    font-family: 'Korolev';
+    font-size: 2.825rem !important;
+    font-weight: 500;
+}
+
+/* FIM VIDEO */
+/* INICIO NEWSLETTER */
+
+.background-footer-newsletter-blog {
+
+    background-color: #595b61;
+}
+
+.text-footer-newsletter {
+    font-family: 'Korolev';
+    font-size: 44px;
+    color: #FFF;
+}
+
+.subtext-footer-newsletter {
+    font-family: 'Korolev';
+    font-size: 23px;
+    color: #FFF;
+}
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"] {
+    background-color: #595b61;
+    color: #fff;
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid #FFF
+}
+
+.wpcf7 input[type="text"]::placeholder,
+.wpcf7 input[type="email"]::placeholder {
+    font-size: 21.37px;
+    color: #fff;
+    padding: 0 0 0 8px;
+}
+
+.sub-newsletter {
+    background: transparent;
+    border: 2px solid #FFF;
+    border-radius: 27px;
+    color: #FFF;
+    padding: 7px 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: right;
+    text-align: center;
+}
+
+.sub-newsletter:hover,
+.icon-rtl-send {
+    background: rgba(209, 209, 209, 0.295);
+    border: 2px solid #FFF;
+    border-radius: 27px;
+    color: #FFF;
+    padding: 7px 50px 7px 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: right;
+    text-align: center;
+}
+
+.icon-rtl-send {
+    padding-right: 50px;
+    background: url("assets/img/icon/send.webp") no-repeat center right 15px;
+    background-size: 20px;
+}
+
+/* FIM NEWSLETTER */
+
+/* INICIO SINGLE PAGE */
+.single-title {
+    font-family: 'Korolev';
+    color: #626262;
+    font-size: 40.5px;
+    font-weight: 600;
+}
+
+.single-date {
+    font-family: 'Mada', Arial, sans-serif;
+    color: #A6A6A6;
+    font-weight: 500;
+    font-size: 17.82px;
+}
+
+.single-description {
+    font-family: 'Mada', Arial, sans-serif;
+    color: #626262;
+    font-size: 17.82px;
+    font-weight: 400;
+}
+
+/* FIM SINGLE PAGE */
+/* FIM DA PERSONALIZAÇÃO PARA O BLOG DO SESI */
+.tag-section {
+    font-family: 'Korolev';
+    color: #d95826 !important;
+    font-weight: 400 !important;
+}
+
+.aligncenter {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.bypostauthor {}
+
+
+/* WordPress gallery */
+.gallery-caption {}
+
+.gallery {
+    margin-bottom: 1.6em;
+}
+
+.gallery-item {
+    display: inline-block;
+    padding: 1.79104477%;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+
+.gallery-icon img {
+    margin: 0 auto;
+}
+
+.gallery-caption {
+    color: #707070;
+    color: rgba(51, 51, 51, 0.7);
+    display: block;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 0.5em 0;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+    display: none;
+}
+
+
+.sticky {}
+
+.wp-caption {
+    border: 1px solid #ccc;
+    margin-bottom: 1.5em;
+    max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin: 1.2% auto 0;
+    max-width: 98%;
+}
+
+.wp-caption-text {
+    text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+    margin: 0.8075em 0;
+}
+
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+
+.nav-link {
+    color: #000 !important;
+    border-bottom: 3px solid transparent !important;
+    text-transform: uppercase;
+    font-family: "Korolev";
+    font-weight: 600;
+    padding: 0 .8rem;
+}
+
+.nav-link:hover {
+    color: #000 !important;
+    border-bottom: 3px solid #F39720 !important;
+    text-transform: uppercase;
+    font-family: "Korolev";
+    font-weight: 600;
+}
+
+/* MOBILE */
+@media (max-width: 575.98px) {
+    .img-carousel {
+        height: 220px;
+    }
+
+    .text-footer-newsletter {
+        font-size: 30px !important;
+    }
+
+    .subtext-footer-newsletter {
+        font-size: 18px !important;
+    }
+
+    .owl-dots {
+        text-align: center !important;
+    }
+
+    .video,
+    .video-title {
+        font-size: 1.825rem !important;
+    }
+
+    .owl-dots {
+        top: 42.5%;
+    }
+}
+
+.img-header {
+    height: 600px !important;
+    object-fit: cover;
+}
